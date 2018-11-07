@@ -187,6 +187,7 @@ elif mode[0] == 'video-info':
                         'status': jsonArr['list']['anime']['is_ended']
                     })
                     video_url = jsonEpisodes['sl']
+                    video_url = video_url + "|referer=https://ebb.io/anime/" + id + "x" + seasons
                     xbmcplugin.addDirectoryItem(handle=addon_handle, url=video_url, listitem=li)
 
     xbmcplugin.endOfDirectory(addon_handle)
